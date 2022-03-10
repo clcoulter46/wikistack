@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon /home/clairec/fullstackAcad/graceHopper/wikistack/app.js"
+     "start": "nodemon /Users/brookestenglein/Desktop/wikistack/app.js"
   },
   "keywords": [],
   "author": "",
@@ -12,9 +12,12 @@
   "dependencies": {
     "express": "^4.17.3",
     "html-template-tag": "^3.1.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "pg": "^8.7.3",
+    "sequelize": "^6.17.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "comments": {"//":["nodemon /home/clairec/fullstackAcad/graceHopper/wikistack/app.js"]}
 }
