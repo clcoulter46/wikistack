@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-     "start": "nodemon /Users/brookestenglein/Desktop/wikistack/app.js"
+    "start": "nodemon /home/clairec/fullstackAcad/graceHopper/wikistack/app.js"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +19,9 @@
   "devDependencies": {
     "nodemon": "^2.0.15"
   },
-  "comments": {"//":["nodemon /home/clairec/fullstackAcad/graceHopper/wikistack/app.js"]}
+  "comments": {
+    "//": [
+      "nodemon /Users/brookestenglein/Desktop/wikistack/app.js"
+    ]
+  }
 }

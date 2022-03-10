@@ -6,6 +6,7 @@ const layout = require("./views/layout");
 const { db, Page, User } = require("./models"); // <-
 const wikiRouter = require("./routes/wiki");
 const usersRouter = require("./routes/users");
+const addPage = require('./views/addPage.js')
 
 app.use(express.static(__dirname + "/public"));
 app.use(morgan("dev"));
@@ -17,13 +18,22 @@ app.use("/users", usersRouter);
 //   res.sendFile(__dirname + '/public/style.css')
 // }) //this gave us the text of the style sheet.
 
+app.use("/add",(req,res)=>{
+  res.send(addPage());
+}) //NEED TO ORDER FROM MOST TO LEAST SPECIFIC
+
 app.use("", (req, res) => {
   res.send(layout());
 }); // accesses layout and makes that the background display for all pages
 
-app.get("/", (req, res) => {
-  res.send("hello world");
-});
+app.get("/",(req,res)=>{
+    res.redirect("/wiki");
+})
+
+
+// app.get("/", (req, res) => {
+//   res.send("hello world");
+// }); //practice connecting to the home page
 
 db.authenticate().then(() => {
   console.log("connected to the database");
